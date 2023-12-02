@@ -1,8 +1,8 @@
 package chapter1.composition.timeintervalrunner;
 
 public class TimeInterval {
-    final int SEK_IN_MIN = 60;
-    final int SEK_IN_HOUR = 3600;
+    private static final int SEK_IN_MIN = 60;
+    private static final int SEK_IN_HOUR = 3600;
     private int seconds;
     private int minutes;
     private int hours;
