@@ -1,6 +1,6 @@
 package chapter4.oop.toolrental;
 
-public class Tool {
+public abstract class Tool {
     private Price price;
     private Brand brand;
 
@@ -16,6 +16,8 @@ public class Tool {
     public Brand getBrand() {
         return brand;
     }
+
+    public abstract void prepareTheTool();
 
     public void statusTool(boolean status) {
         if (status)

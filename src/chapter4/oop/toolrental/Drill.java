@@ -11,4 +11,10 @@ public class Drill extends Tool {
     public int getBattery() {
         return battery;
     }
+
+    @Override
+    public void prepareTheTool() {
+        System.out.println("Battery: " + battery + " mAch is ready");
+        this.statusTool(true);
+    }
 }
