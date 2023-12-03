@@ -7,5 +7,8 @@ public class ToolRental {
 
         Tool tool = new Tool(price, brand);
         tool.statusTool(true);
+
+        Drill drill = new Drill(new Price(11000), new Brand("DeValt"), 5000);
+        drill.statusTool(false);
     }
 }
