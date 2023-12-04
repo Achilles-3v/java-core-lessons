@@ -3,9 +3,9 @@ package chapter4.oop.trainingground;
 public class TrainingGround {
 
     public static void main(String[] args) {
-        Hero warrior = new Warrior("Kris");
-        Hero mage = new Mage("Sam");
-        Hero archer = new Archer("Legolaz");
+        Hero warrior = new Warrior("Kris", 15);
+        Hero mage = new Mage("Sam", 20);
+        Hero archer = new Archer("Legolaz", 10);
 
         Enemy enemy = new Enemy("Spock", 100);
 
