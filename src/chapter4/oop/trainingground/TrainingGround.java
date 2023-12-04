@@ -7,12 +7,14 @@ public class TrainingGround {
         Hero mage = new Mage("Sam");
         Hero archer = new Archer("Legolaz");
 
-        attackEnemy(warrior, mage, archer);
+        Enemy enemy = new Enemy("Spock", 100);
+
+        attackEnemy(enemy, warrior, mage, archer);
     }
 
-    public static void attackEnemy(Hero... heroes) {
+    public static void attackEnemy(Enemy enemy, Hero... heroes) {
         for (Hero hero : heroes) {
-            hero.attackEnemy();
+            hero.attackEnemy(enemy);
         }
     }
 }

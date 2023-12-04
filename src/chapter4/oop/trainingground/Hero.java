@@ -12,7 +12,7 @@ public class Hero {
         return name;
     }
 
-    public void attackEnemy() {
-        System.out.println(name + " attack the enemy");
+    public void attackEnemy(Enemy enemy) {
+        System.out.println(name + " attack the enemy " + enemy.getName());
     }
 }
