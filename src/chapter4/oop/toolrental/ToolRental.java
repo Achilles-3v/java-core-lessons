@@ -12,6 +12,9 @@ public class ToolRental {
     public static void printTool(Tool[] tools) {
         for (Tool tool : tools) {
             tool.print();
+            if (tool instanceof Drill drill1) {
+                drill1.testBattery();
+            }
         }
     }
 

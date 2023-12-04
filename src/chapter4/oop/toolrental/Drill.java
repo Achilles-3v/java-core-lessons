@@ -23,4 +23,8 @@ public class Drill extends Tool {
         super.print();
         System.out.println("Battery: " + battery + " mAch");
     }
+
+    public void testBattery() {
+        System.out.println("Test battery is ready");
+    }
 }
