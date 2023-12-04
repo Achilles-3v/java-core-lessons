@@ -1,6 +1,6 @@
 package chapter4.oop.trainingground;
 
-public class Enemy {
+public class Enemy implements Mortal{
 
     private String name;
     private int health;
@@ -11,8 +11,18 @@ public class Enemy {
     }
 
     public void takeDamage(int damage) {
-        this.health -= Math.min(health, damage);
-        System.out.println(name + " received damage " + damage + "\nHealth: " + health);
+        if (isAlive() && health <= damage) {
+            health = 0;
+            System.out.println(getName() + " dead");
+        } else {
+            this.health -= Math.min(health, damage);
+            System.out.println(name + " received damage " + damage + "\n" + name + " health: " + health);
+        }
+    }
+
+    @Override
+    public boolean isAlive() {
+        return health > 0;
     }
 
     public String getName() {

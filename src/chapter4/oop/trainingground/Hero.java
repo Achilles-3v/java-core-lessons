@@ -1,6 +1,6 @@
 package chapter4.oop.trainingground;
 
-public class Hero {
+public abstract class Hero {
     private String name;
     private int damage;
 
@@ -9,12 +9,10 @@ public class Hero {
         this.damage = damage;
     }
 
+    public abstract void attackEnemy(Enemy enemy);
+
     public String getName() {
         return name;
-    }
-
-    public void attackEnemy(Enemy enemy) {
-        System.out.println(name + " attack the enemy " + enemy.getName());
     }
 
     public int getDamage() {
