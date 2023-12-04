@@ -7,7 +7,7 @@ public class WeldingMachine extends Tool {
     }
 
     @Override
-    public void prepareTheTool() {
+    public void prepare() {
         System.out.print("Status: ");
         this.statusTool(true);
     }

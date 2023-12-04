@@ -2,17 +2,15 @@ package chapter4.oop.toolrental;
 
 public class ToolRental {
     public static void main(String[] args) {
-        Price price = new Price(5000);
-        Brand brand = new Brand("Bosch");
+        Tool drill = new Drill(new Price(11000), new Brand("DeWalt"), 5000);
+        Tool weldingMachine = new WeldingMachine(new Price(15300), new Brand("Interskol"));
 
-//        Tool tool = new Tool(price, brand);
-//        tool.statusTool(true);
+        prepareTheTool(drill, weldingMachine);
+    }
 
-        Drill drill = new Drill(new Price(11000), new Brand("DeWalt"), 5000);
-        drill.statusTool(false);
-        drill.prepareTheTool();
-
-        WeldingMachine weldingMachine = new WeldingMachine(new Price(15300), new Brand("Interskol"));
-        weldingMachine.prepareTheTool();
+    public static void prepareTheTool(Tool... tools) {
+        for (Tool tool : tools) {
+            tool.prepare();
+        }
     }
 }

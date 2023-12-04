@@ -17,7 +17,7 @@ public abstract class Tool {
         return brand;
     }
 
-    public abstract void prepareTheTool();
+    public abstract void prepare();
 
     public void statusTool(boolean status) {
         if (status)
