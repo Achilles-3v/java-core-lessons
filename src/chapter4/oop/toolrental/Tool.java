@@ -1,6 +1,6 @@
 package chapter4.oop.toolrental;
 
-public abstract class Tool {
+public abstract class Tool implements Printable{
     private Price price;
     private Brand brand;
 
