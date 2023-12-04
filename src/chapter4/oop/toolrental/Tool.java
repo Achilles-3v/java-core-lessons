@@ -19,6 +19,10 @@ public abstract class Tool {
 
     public abstract void prepare();
 
+    public void print() {
+        System.out.println("\nPrice: " + price.getValue() + "\n" + "Brand: " + brand.getValue());
+    }
+
     public void statusTool(boolean status) {
         if (status)
             System.out.println("Available");

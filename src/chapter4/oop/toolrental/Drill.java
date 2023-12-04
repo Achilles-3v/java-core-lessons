@@ -17,4 +17,10 @@ public class Drill extends Tool {
         System.out.println("Battery: " + battery + " mAch is ready");
         this.statusTool(true);
     }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("Battery: " + battery + " mAch");
+    }
 }
