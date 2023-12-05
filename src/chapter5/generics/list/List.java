@@ -1,19 +1,19 @@
 package chapter5.generics.list;
 
-public class List {
+public class List<T> {
 
-    private Object[] objects;
+    private T[] objects;
     private int size;
 
     public List(int initialSize) {
-        this.objects = new Object[initialSize];
+        this.objects = (T[]) new Object[initialSize];
     }
 
-    public void add(Object element) {
+    public void add(T element) {
         objects[size++] = element;
     }
 
-    public Object get(int index) {
+    public T get(int index) {
         return objects[index];
     }
 
