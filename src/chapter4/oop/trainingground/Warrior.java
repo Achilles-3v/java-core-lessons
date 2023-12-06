@@ -1,6 +1,8 @@
 package chapter4.oop.trainingground;
 
-public class Warrior extends Hero {
+import chapter5.generics.weapon.MeleeWeapon;
+
+public class Warrior<T extends MeleeWeapon> extends Hero<T> {
 
     public Warrior(String name, int damage) {
         super(name, damage);

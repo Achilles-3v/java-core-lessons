@@ -1,6 +1,8 @@
 package chapter4.oop.trainingground;
 
-public class Mage extends Hero {
+import chapter5.generics.weapon.MagicWeapon;
+
+public class Mage<T extends MagicWeapon> extends Hero<T> {
 
     public Mage(String name, int damage) {
         super(name, damage);
