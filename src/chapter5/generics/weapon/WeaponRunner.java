@@ -1,6 +1,7 @@
 package chapter5.generics.weapon;
 
 import chapter4.oop.trainingground.Archer;
+import chapter4.oop.trainingground.Hero;
 import chapter4.oop.trainingground.Warrior;
 
 public class WeaponRunner {
@@ -11,5 +12,11 @@ public class WeaponRunner {
 
         Warrior<Sword> warrior = new Warrior<>("Warrior", 15);
         warrior.setWeapon(new Sword());
+
+        printWeaponDamage(warrior);
+    }
+
+    public static void printWeaponDamage(Hero<? extends Weapon> hero) {
+        System.out.println(hero.getWeapon().getDamage());
     }
 }
