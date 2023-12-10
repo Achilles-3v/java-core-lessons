@@ -1,19 +1,35 @@
 package chapter4.oop.employee;
 
+import java.util.Random;
+
 public class Employee {
 
     private static int nextId = 1;
 
-    private String name;
+    private String name = "";
     private double salary;
     private int id;
+
+    static {
+        var generator = new Random();
+        nextId = generator.nextInt(1000);
+    }
+
+    {
+        id = nextId;
+        nextId++;
+    }
 
     public Employee(String n, double s) {
         name = n;
         salary = s;
-        id = nextId;
-        this.setId();
     }
+
+    public Employee(double s) {
+        this("Employee #" + nextId, s);
+    }
+
+    public Employee() {}
 
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
