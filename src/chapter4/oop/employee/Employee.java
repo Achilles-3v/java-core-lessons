@@ -26,7 +26,7 @@ public class Employee {
     }
 
     public Employee(double s) {
-        this("Employee #" + nextId, s);
+        this("Employee # " + nextId, s);
     }
 
     public Employee() {}
