@@ -1,17 +1,18 @@
 package chapter4.oop.employee;
 
-import java.time.LocalDate;
-
 public class Employee {
+
+    private static int nextId = 1;
 
     private String name;
     private double salary;
-    private LocalDate hireDay;
+    private int id;
 
-    public Employee(String n, double s, int year, int month, int day) {
+    public Employee(String n, double s) {
         name = n;
         salary = s;
-        hireDay = LocalDate.of(year, month, day);
+        id = nextId;
+        this.setId();
     }
 
     public void raiseSalary(double byPercent) {
@@ -27,7 +28,22 @@ public class Employee {
         return salary;
     }
 
-    public LocalDate getHireDay() {
-        return hireDay;
+    public int getId() {
+        return id;
+    }
+
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public void setId() {
+        id = nextId;
+        nextId++;
+    }
+
+    public static void main(String[] args) {
+
+        var e = new Employee("Harry", 50000);
+        System.out.println(e.getName() + " " + e.getSalary());
     }
 }
