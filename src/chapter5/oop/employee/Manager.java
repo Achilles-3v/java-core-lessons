@@ -21,6 +21,10 @@ public class Manager extends Employee {
         return baseSalary + bonus;
     }
 
+    public String getDescription() {
+        return String.format("an employee with a salary of $%.2f", this.getSalary());
+    }
+
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }

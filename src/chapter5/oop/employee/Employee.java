@@ -2,14 +2,13 @@ package chapter5.oop.employee;
 
 import java.time.*;
 
-public class Employee {
+public class Employee extends Person{
 
-    private String name;
     private double salary;
     private LocalDate hireDay;
 
     public Employee(String name, double salary, int year, int month, int day) {
-        this.name = name;
+        super(name);
         this.salary = salary;
         hireDay = LocalDate.of(year, month, day);
     }
@@ -19,8 +18,8 @@ public class Employee {
         salary += raise;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return String.format("an employee with a salary of $%.2f", salary);
     }
 
     public double getSalary() {
