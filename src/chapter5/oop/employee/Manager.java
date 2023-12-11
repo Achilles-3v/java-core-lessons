@@ -22,7 +22,7 @@ public class Manager extends Employee {
     }
 
     public String getDescription() {
-        return String.format("an employee with a salary of $%.2f", this.getSalary());
+        return String.format("an employee with a salary of $%,.2f", this.getSalary());
     }
 
     public void setBonus(double bonus) {
