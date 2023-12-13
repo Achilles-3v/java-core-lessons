@@ -1,4 +1,4 @@
-package chapter6.interfaces;
+package chapter6.interfaces.sort;
 
 public class Employee implements Comparable<Employee> {
 
