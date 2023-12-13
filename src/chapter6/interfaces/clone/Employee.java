@@ -32,6 +32,11 @@ public class Employee implements Cloneable {
         hireDay.setTime(newHireDay.getTime());
     }
 
+    public void raiseSalary(double byPercent) {
+        double raise = salary * byPercent / 100;
+        salary += raise;
+    }
+
     public String toString() {
         return "Employee[name=" + name + ", salary=" + salary +
                 ", hireDay=" + hireDay + "]";
