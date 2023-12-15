@@ -1,4 +1,4 @@
-package chapter6.lambda.innerClass;
+package chapter6.innerClass.innerClass;
 
 import java.awt.*;
 import java.awt.event.*;

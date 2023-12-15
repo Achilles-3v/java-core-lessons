@@ -1,4 +1,4 @@
-package chapter6.lambda.anonymousInnerClass;
+package chapter6.innerClass.anonymousInnerClass;
 
 import java.awt.*;
 import java.awt.event.*;
